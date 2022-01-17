@@ -1,0 +1,270 @@
+@font-face {   
+  font-family: "Blocktopia";
+  src: url(../imagesGameRaul/Blocktopia.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Blocktopia";
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+.texto {
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
+.texto2 {
+  color: white;
+  text-align: center;
+}
+
+.memory-game {
+  margin: auto;
+  height: 700px;
+  width: 698px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.background {
+  margin: auto;
+  background-image: url(../imagesGameRaul/backgroundGameRaul.png); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 850px;
+}
+
+.card {
+  width: 22%;
+  height: 33, 33%;
+  padding: 10px;
+}
+
+img {
+  width: 100px;
+}
+
+.card-flip {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-flip.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  background-image: url(../imagesGameRaul/cardShowGameRaul.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow-y: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-face--front {
+  background-image: url(../imagesGameRaul/cardHideGameRaul.png);
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-face--back {
+  background-color: var(--light);
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 42%;
+  color: white;
+}
+
+.resultado {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  top: 50px;
+  z-index: 3;
+}
+
+.timer {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  outline: none;
+  top: 974px;
+  left: 1672px;
+  color: white;
+  font-size: 51px;
+}
+
+.centrar {
+  position: absolute;
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.final{
+  color:white;
+  align-items: center;
+  margin: 30%;
+  width: 350px;
+  height: 200px;
+  outline: dashed 1px;
+  text-align: center;
+}
+
+.boton {
+  margin-top: 10px;
+  padding: 1.3em 3em;
+  font-size: 15px;
+  font-weight: 900;
+  border: 2px solid purple;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background-color: purple;
+  border: 2px solid white;
+  box-shadow: 0px 15px 20px rgba(159, 46, 229, 0.4);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.boton:active {
+  transform: translateY(-1px);
+}
+
+.btnVolver {
+  margin-top: 50px;
+  padding: 1.3em 3em;
+  font-size: 15px;
+  font-weight: 900;
+  border: 2px solid red;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnVolver:hover {
+  background-color: red;
+  border: 2px solid white;
+  box-shadow: 0px 15px 20px rgba(255, 0, 0, 0.4);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.btnVolver:active {
+  transform: translateY(-1px);
+}
+
+.btnExit {
+  margin-top: 10px;
+  padding: 1.3em 3em;
+  font-size: 15px;
+  font-weight: 900;
+  border: 2px solid red;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnExit:hover {
+  background-color: red;
+  border: 2px solid white;
+  box-shadow: 0px 15px 20px rgba(255, 0, 0, 0.4);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.btnExit:active {
+  transform: translateY(-1px);
+}
+
+#modulos {
+  display: flex;
+  flex-direction: column;
+  margin: 100px;
+}
+
+.etiquetaModulo {
+  font-size: larger;
+}
+
+.resultado2 {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 20%;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.titulo{
+  margin-bottom: 20px;
+}
+
+.tituloIns{
+  color: white;
+  font-size: 50px;
+}
+
+.textIns{
+  margin-top: 30px;
+  color: white;
+  font-size: 20px;
+
+}
+
+.salir{
+  display: flex;
+  flex-direction: column;
+}
